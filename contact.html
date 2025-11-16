@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SecureBank</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .contact-info {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Bank Logo" width="50" height="50">
+                <span>SecureBank</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="accounts.html">Accounts</a></li>
+                    <li><a href="transfers.html">Transfers</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-container">
+
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+
+                <p><strong>Address:</strong> Sultan Qaboos University, Muscat, Oman</p>
+                <p><strong>Phone:</strong> +968 92429924, +968 72364777</p>
+
+                <!-- Correct EMAIL LINK -->
+                <p><strong>Email:</strong> 
+                    <a href="mailto:s136635@student.squ.edu.om">s136635@student.squ.edu.om</a>,
+                    <a href="mailto:s140456@student.squ.edu.om">s140456@student.squ.edu.om</a>
+                </p>
+
+                <p><strong>Business Hours:</strong> 24/7 Online Support</p>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+
+                <!-- Correct Form Submission to httpbin -->
+                <form action="mailto:s136635@student.squ.edu.om" method="post" id="contactForm" enctype="text/plain">
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="account">Account Issues</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Branch Locations Table -->
+        <section>
+            <h2>Our Branch Locations</h2>
+            <table class="branches-table">
+                <thead>
+                    <tr>
+                        <th>Branch</th>
+                        <th>Location</th>
+                        <th>Phone</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>University Branch</td>
+                        <td>SQU Campus</td>
+                        <td>+968 92429924</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Branch</td>
+                        <td>Online Only</td>
+                        <td>+968 72364777</td>
+                        <td>24/7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SecureBank. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
